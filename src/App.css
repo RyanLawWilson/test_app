@@ -12,6 +12,11 @@ form {
     margin-bottom: 10px;
 }
 
+.todo-container {
+    color: aqua;
+    font-weight: bolder;
+}
+
 form h3 {
     margin: 0;
 }
