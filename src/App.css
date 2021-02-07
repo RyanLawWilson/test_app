@@ -2,6 +2,14 @@ form {
     background-color: aqua;
     padding: 10px;
     text-align: center;
+    margin: 20px 5px;
+}
+
+.todo-container {
+    background-color: forestgreen;
+    padding: 5px 10px;
+    margin: 0 5px;
+    margin-bottom: 10px;
 }
 
 form h3 {
