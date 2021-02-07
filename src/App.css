@@ -1,0 +1,14 @@
+form {
+    background-color: aqua;
+    padding: 10px;
+    text-align: center;
+}
+
+form h3 {
+    margin: 0;
+}
+
+.App {
+    background-color: crimson;
+    padding: 5px 20px;
+}
