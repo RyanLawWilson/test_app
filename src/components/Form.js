@@ -3,11 +3,11 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEdit } from '@fortawesome/free-solid-svg-icons'
 
-const Form = ({ setInputText, todos, setTodos, inputText }) => {
+const Form = ({ setStatus, setInputText, todos, setTodos, inputText }) => {
 
 
     const inputTextHandler = (e) => {
-        console.log(e);
+        console.log(e.target.value);
         setInputText(e.target.value);
     };
 
@@ -22,10 +22,12 @@ const Form = ({ setInputText, todos, setTodos, inputText }) => {
 
         // Set state of field back to ""
         setInputText("");
-
-        console.log("Hey!");
     };
 
+    const statusHandler = (e) => {
+        // console.log(e.target.value);
+        setStatus(e.target.value);
+    };
 
     return(
         <form>
@@ -37,6 +39,12 @@ const Form = ({ setInputText, todos, setTodos, inputText }) => {
             <button onClick={submitTodoHandler} type="submit">Submit!</button>
 
             <FontAwesomeIcon icon={faEdit} />
+
+            <select onChange={statusHandler} className="select">
+                <option value="All">All</option>
+                <option value="Completed">Completed</option>
+                <option value="Uncompleted">Uncompleted</option>
+            </select>
         </form>
     );
 }

@@ -29,7 +29,7 @@ const Todo = ({ todoText, todo, todoCompleted, todoId, todos, setTodos }) => {
         <div className="todo">
             <li className={`todo-item ${todo.completed ? "completed" : ""}`}>{todoText}&nbsp;
             <button onClick={completeHandler} className="complete-btn" type="button"><FontAwesomeIcon icon={faCheck} /></button>&nbsp;
-            <button onClick={deleteHandler} onclassName="trash-btn" type="button"><FontAwesomeIcon icon={faTrash} /></button>
+            <button onClick={deleteHandler} className="trash-btn" type="button"><FontAwesomeIcon icon={faTrash} /></button>
             </li>
         </div>
     );
