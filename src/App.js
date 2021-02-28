@@ -19,8 +19,13 @@ function App() {
   // Use Effect
   // Will run once when the program starts
   useEffect(() => {
+    getLocalTodos();
+  }, []);
+
+  useEffect(() => {
     filterHandler();
-  }, [todos, status])
+    saveLocalTodos();
+  }, [todos, status]);
 
   //Functions
 
@@ -35,6 +40,17 @@ function App() {
       default:
         setFilteredTodos(todos);
         break;
+    }
+  };
+
+  //Save todos to local storage
+  const saveLocalTodos = () => {
+    localStorage.setItem("todos", JSON.stringify(todos))
+  };
+
+  const getLocalTodos = () => {
+    if (localStorage.getItem("todos") !== null) {
+      setTodos(JSON.parse(localStorage.getItem("todos"))); 
     }
   };
 
