@@ -8,6 +8,7 @@ import TodoList from './components/TodoList';
 function App() {
   const[inputText, setInputText] = useState("");
   const[todos, setTodos] = useState([]);
+  // const[complete, setComplete] = useState(false);
 
   return (
     <div className="App">
